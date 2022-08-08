@@ -78,7 +78,7 @@ class _NotificationPageState extends State<NotificationPage> {
                       ),
                       Expanded(
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          // mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
@@ -96,7 +96,7 @@ class _NotificationPageState extends State<NotificationPage> {
                               textAlign: TextAlign.start,
                             ),
                             const SizedBox(height: 8),
-                            const Icon(Icons.more_horiz),
+                            const Icon(Icons.more_horiz)
                           ],
                         ),
                       ),
