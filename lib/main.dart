@@ -1,23 +1,17 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 
-import 'homePage.dart';
+import 'notification.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main(List<String> args) async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final String response = await rootBundle.loadString('assets/json/noti.json');
+  final NotificationResponse notificationResponse =
+      NotificationResponse.fromRawJson(response);
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(),
-    );
-  }
+  notificationResponse.data?.forEach((element) {
+    debugPrint("${element.toJson()}");
+    debugPrint("____________________");
+  });
 }

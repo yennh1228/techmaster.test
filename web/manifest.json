@@ -1,6 +1,6 @@
 {
-    "name": "flutter_exam",
-    "short_name": "flutter_exam",
+    "name": "test_ui",
+    "short_name": "test_ui",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
